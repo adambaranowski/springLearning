@@ -25,6 +25,14 @@ public class ProductDao extends GenericDao<Product, Long>{
 
     }
 
+    public List<Product> findByName(String name){
+        TypedQuery<Product> find = entityManager
+                .createNamedQuery(Product.FIND_BY_NAME, Product.class);
+        find.setParameter(Product.PARAM_NAME, "imie do wyszukania");
+        List<Product> result = find.getResultList();
+        return result;
+    }
+
     public void deleteAll() {
         Query deleteAllQuery = entityManager.createNamedQuery("Product.deleteAll");
         deleteAllQuery.executeUpdate();

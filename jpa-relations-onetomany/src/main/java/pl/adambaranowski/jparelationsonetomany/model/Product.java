@@ -9,11 +9,13 @@ import java.util.List;
 @Table(name = "product")
 @NamedQueries({
         @NamedQuery(name = "Product.findAll", query = "SELECT p FROM Product p"),
-        @NamedQuery(name = "Product.findByName", query = "SELECT p FROM Product p WHERE p.name = :name"),
+        @NamedQuery(name = "Product.findByName", query = Product.FIND_BY_NAME + Product.PARAM_NAME),
         @NamedQuery(name = "Product.deleteAll", query = "DELETE FROM Product p")
 })
 public class Product implements Serializable {
 
+    public static final String FIND_BY_NAME = "SELECT p FROM Product p WHERE p.name = :";
+    public static final String PARAM_NAME = "name";
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_product")
