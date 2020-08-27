@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pl.adambaranowski</groupId>
-    <artifactId>spring-mvc-scopes</artifactId>
+    <artifactId>spring-mvc-dispatch</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-mvc-scopes</name>
+    <name>spring-mvc-dispatch</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -23,19 +23,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf -->
-        <dependency>
-            <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf</artifactId>
-            <version>3.0.11.RELEASE</version>
-        </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
